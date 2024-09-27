@@ -1,0 +1,30 @@
+.max {
+    width: 100% !important;
+}
+.column {
+    margin-bottom: 2rem !important;
+}
+.red_underline {
+    display: inline-block;
+    position: relative;
+    padding: 0.2em 0;
+    overflow: hidden
+}
+.red_underline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.2em;
+    background-color: #ff5050;
+    opacity: 0;
+    transition: opacity 200ms, transform 200ms;
+    transform: scaleX(0);
+}
+.red_underline:hover::after,
+.red_underline:focus::after {
+    opacity: 1;
+    /* transform: translate3d(0, 0.2em, 0); */
+    transform: scaleX(1);
+}
